@@ -1,0 +1,23 @@
+/*
+  Uncommon CSS Bug: Unexpected Behavior with :hover and :focus Pseudo-classes on Nested Elements
+*/
+
+.outer {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.inner {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+}
+
+.outer:hover .inner {
+  background-color: yellow;
+}
+
+.outer:focus-within .inner {
+  background-color: orange;
+}
