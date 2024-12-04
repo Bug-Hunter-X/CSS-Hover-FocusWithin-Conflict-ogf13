@@ -1,0 +1,28 @@
+/*
+  Solution: Using Specificity to Resolve Conflicts
+*/
+
+.outer {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.inner {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+}
+
+.outer:hover .inner {
+  background-color: yellow;
+}
+
+.outer:focus-within .inner {
+  background-color: orange !important; /* Added !important to override :hover specificity */
+}
+
+/* Alternatively, add more specific selectors to control styles*/
+.outer:hover:focus-within .inner { /*This ensures that both hover and focus-within are active */
+  background-color: gold; /*A new style for the case where both conditions are met*/
+}
